@@ -2,10 +2,11 @@ import Title from "../Title"
 import ProfileSection from "./ProfileSection"
 import LinkButton from "../LinkButton"
 import styles from "./styles.module.css"
+import React, { useState } from 'react';
 
 
 export default function Profile(props) {
-
+    //[valor , função modificadora]
     const [followText, setFollowText] = useState("Follow")
 
     function handleClick(ev) {
@@ -17,8 +18,7 @@ export default function Profile(props) {
         <div className={styles.container}>
             <img className={styles.avatar} src={props.avatar} alt={props.name} />
             <Title>
-                <span>Name: </span>
-                {props.name}
+                <span>Name: {props.name}</span>
                 <button
                     className={styles.followButton}
                     onClick={handleClick}
