@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 
 Input.propTypes = {
     passwordSize: PropTypes.number.isRequired,
-    setPasswordSize: PropTypes.func.isre
+    setPasswordSize: PropTypes.func
 }
 
 export default function Input(props) {
@@ -14,7 +14,7 @@ export default function Input(props) {
             id="passwordSize"
             min={1}
             value={props.passwordSize}
-            onChange={(ev) => props.setPasswordSize(ev.target.value)}
+            onChange={(ev) => props.setPasswordSize(+ev.target.value)}
         />
     )
 }
